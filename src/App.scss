@@ -1,0 +1,7 @@
+@import '../node_modules/bulma/bulma.sass';
+
+@media screen and (max-width: 600px) {
+    .media {
+        flex-direction: column;
+    }
+}
