@@ -4,7 +4,7 @@ import { ProductConsumer } from '../context';
 
 const Product = props => {
 
-        const { id, title, img, price, company, count, inCart, info } = props.product;
+        const { id } = props.product;
         return (
         <ProductConsumer>
             {value => (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ProductConsumer } from '../context';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ const Modal = props => {
                         </header>
                         <section className="modal-card-body">
                                 <figure className="image is-128x128">
-                                    <img src={img} alt="Image" />
+                                    <img src={img} alt="product" />
                                 </figure>
                                 <p className='title is-6'>{title}</p>
                                 <p className='subtitle'>Price: ${price}</p>

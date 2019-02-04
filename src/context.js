@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { storeProducts, detailProduct } from './data';
-import { CardElement, injectStripe } from 'react-stripe-elements'
 
 const ProductContext = React.createContext()
 
@@ -53,7 +52,7 @@ const ProductProvider = props => {
     const increment = id => {
 
         let tempCart = [...cart]
-        const selectedProduct = tempCart.find(item => item.id == id)
+        const selectedProduct = tempCart.find(item => item.id === id)
         const index = tempCart.indexOf(selectedProduct)
         const product = tempCart[index]
         product.count ++
@@ -66,7 +65,7 @@ const ProductProvider = props => {
     const decrement = id => {
 
         let tempCart = [...cart]
-        const selectedProduct = tempCart.find(item => item.id == id)
+        const selectedProduct = tempCart.find(item => item.id === id)
         const index = tempCart.indexOf(selectedProduct)
         const product = tempCart[index]
         product.count = product.count - 1
@@ -81,18 +80,10 @@ const ProductProvider = props => {
         }
     }
 
-    const getPrice = id => {
-        let tempProducts = [...products];
-        const index = tempProducts.indexOf(getItem(id));
-        const product = tempProducts[index];
-        const price = product.price;
-        return price;
-    }
-    
 
     const removeItem = id => {
         let tempCart = [...cart]
-        tempCart = tempCart.filter(item => item.id != id)
+        tempCart = tempCart.filter(item => item.id !== id)
 
         let tempProducts = [...products]
         const index = tempProducts.indexOf(getItem(id))
@@ -153,8 +144,7 @@ const ProductProvider = props => {
             removeItem,
             cartSubtotal,
             cartTotal,
-            cartTax,
-            clearCart
+            cartTax
 
         }}>
             {props.children}

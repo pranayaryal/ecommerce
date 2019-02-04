@@ -8,7 +8,7 @@ const CartList = ({value}) => {
                 <div className='columns is-centered' key={item.id}>
                     <div className='column'>
                         <figure className="image is-128x128">
-                            <img src={item.img} alt="Image" />
+                            <img src={item.img} alt="item" />
                         </figure>
                     </div>
                     <div className='column'>
@@ -18,9 +18,9 @@ const CartList = ({value}) => {
                         Price: ${item.price}
                     </div>
                     <div className='column'>
-                        <a className="button is-small" onClick={() => decrement(item.id)}>-</a>
+                        <a href="#" className="button is-small" onClick={() => decrement(item.id)}>-</a>
                         <span className="subtitle">{item.count}</span>
-                        <a className="button is-small" onClick={() => increment(item.id)}>+</a>
+                        <a href="#" className="button is-small" onClick={() => increment(item.id)}>+</a>
                     </div>
                     <div className='column'>
                         <span className="icon">

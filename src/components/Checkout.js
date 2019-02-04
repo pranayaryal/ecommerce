@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import StripeCheckout from 'react-stripe-checkout'
+import React from 'react'
 import { CardElement, injectStripe } from 'react-stripe-elements';
 import { ProductConsumer } from '../context';
 

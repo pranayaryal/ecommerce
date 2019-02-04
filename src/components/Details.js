@@ -11,13 +11,13 @@ const Details = props => {
                     // const prod = value.products.find(product =>
                     //     product.id == props.location.id)
                     const prod = value.productDetail;
-                    const { id, title, img, price, company, count, inCart, info } = prod;
+                    const { id, title, img, price, company, inCart, info } = prod;
 
                     return <section className="section">
                         <article className="media">
                             <div className="media-left">
                                 <figure className="image is-256x256">
-                                    <img src={img} alt="Image" />
+                                    <img src={img} alt="title" />
                                 </figure>
                             </div>
                             <div className="media-content">

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../src/logo.svg'
-import styled from 'styled-components'
 import { ButtonContainer } from './Button'
 
 
@@ -12,7 +11,7 @@ const Navbar = props => {
             <div className="navbar-brand">
                 <div className="navbar-item">
                     <Link to="/">
-                        <img src={Logo} />
+                        <img src={Logo} alt="Logo" />
                     </Link> 
                 </div>
                 <div className="navbar-item"></div>

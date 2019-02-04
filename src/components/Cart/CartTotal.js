@@ -1,4 +1,4 @@
-import React, { useEffect }  from 'react'
+import React from 'react'
 
 const CartTotal = ({value}) => {
         const { cartTotal, cartSubtotal, cartTax, clearCart} = value
