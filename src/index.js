@@ -7,11 +7,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-<ProductProvider>
+    <ProductProvider>
     <Router>
         <App />
     </Router>
-</ProductProvider>,
+    </ProductProvider>,
 document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
