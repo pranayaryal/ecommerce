@@ -7,6 +7,7 @@ const Details = props => {
         <div>
             <ProductConsumer>
                 {value => {
+                    const { addToCart, openModal } = value
                     // const prod = value.products.find(product =>
                     //     product.id == props.location.id)
                     const prod = value.productDetail;
@@ -26,9 +27,12 @@ const Details = props => {
                                     <p className="subtitle">${price}</p>
                                     <p className="has-text-grey">{info}</p>
                                     <Link to="/" className="button is-primary">Back To Products</Link>
-                                    <button className="button is-warning" 
+                                    <button className="button is-warning"
                                         disabled={inCart ? true : false}
-                                        onClick={() =>  value.addToCart(id) }>
+                                        onClick={() => {
+                                            addToCart(id);
+                                            openModal(id)
+                                        }}>
                                         {inCart ? 'In Cart' : 'Add To Cart'}
                                     </button>
                                 </div>

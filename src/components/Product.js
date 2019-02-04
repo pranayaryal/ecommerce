@@ -37,11 +37,16 @@ const Product = props => {
             {/* <Link to="/details" className="card-footer-item" state={{id: props.product.id}}>Details</Link> */}
 
             <Link to="/details" onClick={() => value.handleDetail(id)} className="card-footer-item">Details</Link>
-            <Link to="/cart" className="button is-large card-footer-item" disabled={props.product.inCart? true: false}>
+            <button  className="button is-large card-footer-item" 
+                disabled={props.product.inCart? true: false}
+                onClick={() => {
+                    value.addToCart(id);
+                    value.openModal(id);
+                    }}>
                 <span className="icon">
                 <i className="fas fa-shopping-cart"></i>
                 </span>
-            </Link>
+            </button>
             </footer>
         </div>
             )}
